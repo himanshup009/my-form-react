@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Dashboard</title>
+    <link rel="stylesheet" href="travel.css">
+</head>
+<body>
+    <header>
+        <h1>
+            Explore the world
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Destination</a></li>
+                <li><a href="#">Booking</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="filters">
+       
+        <form>
+            <label for="">Choose a Region</label>
+            <select name="" id="region">
+                <option value="Asia">Asia</option>
+                <option value="Australia">Europe</option>
+                <option value="America">America</option>
+            </select>
+        </form>
+    </section>
+ 
+    <section class="destination-list">
+        <article class="card">
+            <img src="https://www.worldatlas.com/upload/df/29/12/shutterstock-490898872.jpg" height="100" width="100" alt="">
+            <h2>miami Beach</h2>
+            <p>$1000/person</p>
+        </article>
+ 
+        <article class="card">
+            <img src="https://www.worldatlas.com/r/w1200/upload/88/dc/ab/thinkstockphotos-522793816.jpg" height="100" width="100" alt="">
+            <h2>Mount Kosciuszko</h2>
+            <p>$500/person</p>
+        </article>
+        <article class="card">
+            <img src="https://th.bing.com/th/id/OIP.J1SruN3Bc9sIw1DP0UvT7gHaEh?rs=1&pid=ImgDetMain" height="100" width="100" alt="">
+            <h2>Temple</h2>
+            <p>$100/person</p>
+        </article>
+    </section>
+    <center>
+    <section class="booking-form">
+        <h2>Book Your Trip</h2>
+        <form>
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            name=""
+            id="name"
+            placeholder="Enter Your Name"
+            required
+          />
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            name=""
+            id="Email"
+            placeholder="Enter Your Email"
+            required
+          />
+          <label for="date">Date:</label>
+          <input
+            type="date"
+            name=""
+            id="date"
+            placeholder="Enter Your Name"
+            required
+          />
+          <button style="color: red; background: none; border: none; font-size: larger;" type="submit"><b>Book Now</b></button>
+        </form>
+      </section>
+      </center>
+      <footer>
+        <p>$copy; 2025 Himanshu's Travel Planner</p>
+      </footer>
+   
+   
+</body>
+</html>
