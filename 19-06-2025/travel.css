@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+    color: #8d3d3d;
+}
+
+
+header {
+    background: linear-gradient(to right, #da2d27, #f0ad4e); /* softer red-yellow */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 4px solid #c9302c;
+    font-size: 1.5em;
+    text-shadow: none; 
+}
+
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 15px;
+    background-color: #fff8e1;
+    border-bottom: 2px solid #ffcf40;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #8b0000;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #d10000;
+}
+
+nav ul li:first-child a {
+    font-weight: bold;
+    color: #b30000;
+}
+
+
+.fillters {
+    padding: 20px;
+    background-color: #f4e2d8;
+    overflow: auto;
+    border-bottom: 2px solid #e0a96d;
+}
+
+
+.destination-list {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+.card {
+    width: 300px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    position: relative;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    filter: grayscale(20%);
+    opacity: 0.9;
+}
+
+.card::after {
+    content: "OFFER";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff4c4c;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 0.7em;
+    border-radius: 4px;
+    z-index: 2;
+}
+
+.booking-section {
+    background-color: #2a4d69;
+    padding: 40px;
+    margin: 30px;
+    border-radius: 10px;
+    border: 2px solid #000;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+    color: #ffffff;
+}
+
+.booking-form input,
+.booking-form button {
+    display: block;
+    width: 100%;
+    margin: 12px 0;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #bbb; 
+    font-size: 1em;
+}
+
+input[type="email"] {
+    border: 2px solid #ded7cf;
+}
+
+.booking-form button {
+    background-color: #f76c6c; 
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.booking-form button:hover {
+    background-color: #ffb627; 
+}
+
