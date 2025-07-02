@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Basic Form Validation</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    input, textarea {
+      display: block;
+      margin: 10px 0;
+      padding: 8px;
+      width: 300px;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .error {
+      border-color: red;
+      background-color: #ffe6e6;
+    }
+
+    #submitBtn {
+      padding: 10px 20px;
+      cursor: pointer;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+
+    #submitBtn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Contact Form</h2>
+  <form id="contactForm">
+   
+    <input type="email" id="email" placeholder="Email" />
+    
+    <button type="submit" id="submitBtn">Submit</button>
+  </form>
+
+  <script>
+    $(document).ready(function() {
+      $("#contactForm").submit(function(event) {
+        event.preventDefault(); 
+
+        let isValid = true;
+
+        $("input, textarea").removeClass("error");
+
+        
+        $("#contactForm input, #contactForm textarea").each(function() {
+          if ($(this).val().trim() === "") {
+            $(this).addClass("error");
+            isValid = false;
+          }
+        });
+
+      });
+    });
+  </script>
+
+</body>
+</html>

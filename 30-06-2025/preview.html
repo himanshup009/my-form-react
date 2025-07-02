@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Real-Time Input Preview</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    #previewBox {
+      margin-top: 10px;
+      padding: 10px;
+      border: 2px dashed #007bff;
+      color: #333;
+      font-size: 18px;
+      min-height: 30px;
+      width: 300px;
+    }
+  </style>
+</head>
+<body>
+
+  <h3>Type Something:</h3>
+  <input type="text" id="liveInput" placeholder="Type here..." />
+  <div id="previewBox">Preview will appear here</div>
+
+  <script>
+    $(document).ready(function() {
+      $("#liveInput").on("input", function() {
+        let inputText = $(this).val();
+        if (inputText === "") {
+          $("#previewBox").text("Preview will appear here...");
+        } else {
+          $("#previewBox").text(inputText);
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
